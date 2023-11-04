@@ -70,25 +70,28 @@ module "eks" {
     one = {
       name = "node-group-1"
 
-      instance_types = ["t3.small"]
+      instance_types = ["t2.large"]
 
       min_size     = 1
-      max_size     = 3
-      desired_size = 2
-    }
-
-    two = {
-      name = "node-group-2"
-
-      instance_types = ["t3.small"]
-
-      min_size     = 1
-      max_size     = 2
+      max_size     = 1
       desired_size = 1
     }
   }
 }
 
+resource "aws_s3_bucket" "bucket" {
+    bucket = "terraform-st-backend"
+}
+resource "aws_dynamodb_table" "terraform-lock" {
+    name           = "terraform_state"
+    read_capacity  = 5
+    write_capacity = 5
+    hash_key       = "LockID"
+    attribute {
+        name = "LockID"
+        type = "S"
+    }
+}
 
 # https://aws.amazon.com/blogs/containers/amazon-ebs-csi-driver-is-now-generally-available-in-amazon-eks-add-ons/ 
 data "aws_iam_policy" "ebs_csi_policy" {
