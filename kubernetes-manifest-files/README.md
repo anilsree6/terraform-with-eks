@@ -18,11 +18,11 @@ file and then apply it.
 
 3) once the above two steps are done you can add them to kustomization file by running the below command
 
-cat <<EOF >>./kustomization.yaml
+{cat <<EOF >>./kustomization.yaml
 resources:
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
-EOF                              
+EOF}                              
 
 You can apply now kubectl apply -k ./
 
@@ -65,7 +65,11 @@ helm install cert-manager jetstack/cert-manager --namespace cert-manager --creat
 
 kubectl apply -f wp_production_issuer.yaml
 
-# 
+# After creating wordpress_ingress.yaml
+
+kubectl apply -f wordpress_ingress.yaml
+
+
 
 
 
