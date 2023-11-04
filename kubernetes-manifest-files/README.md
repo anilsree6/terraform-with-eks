@@ -61,6 +61,12 @@ helm repo add jetstack https://charts.jetstack.io
 helm repo update
 helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.7.1 --set installCRDs=true
 
+# Once after creating wp_production_issuer.yaml apply it
+
+kubectl apply -f wp_production_issuer.yaml
+
+# 
+
 
 
   
