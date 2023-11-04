@@ -22,7 +22,10 @@ cat <<EOF >>./kustomization.yaml
 resources:
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
-EOF                              
+EOF    
+
+The above cat command will look in the below image and make sure you run same as menioned in the kubernetes official doc
+![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/711015c0-396c-4893-bfc5-e8df3be6da44)
 
 You can apply now kubectl apply -k ./
 
