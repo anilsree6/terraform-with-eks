@@ -1,6 +1,7 @@
 # I have followed below links to create mysql, worpress, cert manager, ingress-nginx controller
 
-[https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/] 
+[https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/]
+
 [https://medium.com/@ezekiel.umesi/deploy-a-wordpress-application-on-a-kubernetes-cluster-using-ingress-cert-manager-and-helm-1f3b34356197]
 
 Below are the steps I have followed in the kubernetes official docs I have used as reference to create mysql-wordpress and wordpress-deployment yaml files. I have created
