@@ -1,8 +1,12 @@
 # Pre requisites
 AWS account
+
 AWS CLI {Install and configure}
+
 Terraform
+
 AWS IAM authenticator
+
 kubectl
 
 # Provision an EKS Cluster using Terraform I have followed the below link 
