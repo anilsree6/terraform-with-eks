@@ -26,9 +26,13 @@ and proceed to create the resources once you are done you can uncomment this bac
 
 Command where we can use is:
 A. terraform init
+
 B. terraform plan 
+
 C. terraform validate
+
 D. terraform apply
+
 E. terraform destroy {run this only if you want to destroy the resources as clean up is also mandatory only for testing purpose}
 
 Please uncomment the backend.tf file and reinitialize the terraform init where we can store tf state file remote backend that is s3. 
