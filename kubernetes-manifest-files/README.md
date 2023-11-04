@@ -18,11 +18,11 @@ file and then apply it.
 
 3) once the above two steps are done you can add them to kustomization file by running the below command
 
-#cat <<EOF >>./kustomization.yaml
-resources:
-  - mysql-deployment.yaml
-  - wordpress-deployment.yaml
-EOF                              
+# cat <<EOF >>./kustomization.yaml
+  resources:
+   - mysql-deployment.yaml
+   - wordpress-deployment.yaml
+  EOF                              
 
 You can apply now kubectl apply -k ./
 
