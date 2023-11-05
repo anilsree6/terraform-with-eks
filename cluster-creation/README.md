@@ -138,7 +138,7 @@ Install cert manager:
 
 once you create then run kubectl apply -f wp_production_issuer.yaml
 
-# Now we need to create certificate.yamlfile as well and we should any valid domain registered where we can refer in this yaml file.
+# Now we need to create certificate.yamlfile as well and we should have any valid domain registered where we can refer in this yaml file.
 
 once you create certificate yaml file then run kubectl apply -f certificate.yaml
 
@@ -153,7 +153,7 @@ Then you can also follow and run the below commands for good understanding
 #kubectl describe secret <name of your secret> 
 
 # I am going through the things mentioned in the official docs of cert manager how to use of let's encypt 
-I have tried my best to cope up and implement with let's encrypt by following the below doc
+I have tried my best to cope up and implement with let's encrypt by following the below doc, but i was not. I will defenitely implement it.
 
 https://cert-manager.io/docs/tutorials/acme/nginx-ingress/
 
