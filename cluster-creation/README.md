@@ -107,6 +107,31 @@ DNS name and go to the chrome browser and paste that dns name and hit enter. Bin
 Wordpress is up and runnig now.
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/a6ee6db5-9483-4560-a662-bfcdf1ae8afc)
 
+
+# Now we will try to use cert manager, ingress nginx controller
+
+We will install both nginx and cert manager using helm.
+
+# Let's install helm we can use this for installing cert manager and ingress nginx
+
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh
+
+# Now let's install Ingress nginx and cert manager
+
+Install ingress nginx:
+
+#helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx --namespace ingress-nginx --create-namespace
+
+Install cert manager:
+
+#helm repo add jetstack https://charts.jetstack.io
+
+#helm repo update
+
+#helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.7.1 --set installCRDs=true
+
 N. terraform destroy {run this only if you want to destroy the resources as clean up is also mandatory only for testing purpose}
 
 
