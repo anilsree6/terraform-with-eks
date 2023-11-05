@@ -132,6 +132,10 @@ Install cert manager:
 
 #helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.7.1 --set installCRDs=true
 
+# Now create wp_production_issuer.yaml file which in present under kubernetes-manifest-files
+
+
+
 N. terraform destroy {run this only if you want to destroy the resources as clean up is also mandatory only for testing purpose}
 
 
