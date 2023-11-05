@@ -88,12 +88,11 @@ WordPress configuration file:
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/5d7b492a-9425-4cb2-abbf-323f63facb78)
 
 Once downloaded add them to kustomization.yaml file by running the below command
-( cat <<EOF >>./kustomization.yaml
+"cat <<EOF >>./kustomization.yaml
 resources:
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
-EOF
-)
+EOF"
 Please find the below image for your reference
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/1e341992-c485-450f-b618-cde5f2ae8142)
 
