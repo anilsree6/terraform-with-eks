@@ -100,6 +100,16 @@ L. Once after completion of the above K step run the command to apply( kubectl a
 The following output tells that your secret of mysql, service,persistent volume claim,deployment of mysql and wordpress will be created 
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/2565d4d3-8aca-47a2-84ec-6ad39f495d3a)
 
+H. Once after completion you can go to AWS Console and click on EC2 and in the left plane select LoadBalancers where it will navigate to another page and copy the
+DNS name and go to the chrome browser and paste that dns name and hit enter. Bingo!! you will see wordpress will be up and running.
+![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/37eb6d60-2bee-4db1-a451-860d5cc45088)
+
+Wordpress is up and runnig now.
+![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/a6ee6db5-9483-4560-a662-bfcdf1ae8afc)
+
+
+
+
 
 
 
