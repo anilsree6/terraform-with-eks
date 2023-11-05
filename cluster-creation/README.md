@@ -110,7 +110,7 @@ Wordpress is up and runnig now.
 
 
 
-# Now we will try to use cert manager,let's encrypt, ingress nginx controller
+# Now we will try to use cert manager, ingress nginx controller
 
 We will install both nginx and cert manager using helm.
 
@@ -134,6 +134,13 @@ Install cert manager:
 
 #helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.7.1 --set installCRDs=true
 
+# You can verify the above two creations by running the below commands
+
+#Kubectl -n ingress-nginx get all 
+
+#kubectl -n cert-manager get all
+
+
 # Now create wp_production_issuer.yaml file which in present under kubernetes-manifest-files folder in this repo only 
 
 once you create then run kubectl apply -f wp_production_issuer.yaml
@@ -150,7 +157,7 @@ Then you can also follow and run the below commands for good understanding
 
 #kubectl get secrets
 
-#kubectl describe secret <your-secret> 
+#kubectl describe secret (your-secret>)
 
 # I am going through the things mentioned in the official docs of cert manager how to use of let's encypt 
 I have tried my best to cope up and implement with let's encrypt by following the below doc, but i was not. I will defenitely implement it.
