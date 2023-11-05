@@ -168,6 +168,9 @@ https://cert-manager.io/docs/tutorials/acme/nginx-ingress/
 
 N. terraform destroy {run this only if you want to destroy the resources as clean up is also mandatory only for testing purpose}
 
+![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/c3c83659-d3ff-444d-ad7f-5a9d1f42532c)
+
+
 
 
 
