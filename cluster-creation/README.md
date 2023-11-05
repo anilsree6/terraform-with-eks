@@ -153,16 +153,18 @@ Then you can also follow and run the below commands for good understanding
 
 #kubectl get certificate -w 
 
-#kubectl describe certificate <certificate-name>
+#kubectl describe certificate (certificate-name)
 
 #kubectl get secrets
 
-#kubectl describe secret (your-secret>)
+#kubectl describe secret (your-secret)
 
 # I am going through the things mentioned in the official docs of cert manager how to use of let's encypt 
 I have tried my best to cope up and implement with let's encrypt by following the below doc, but i was not. I will defenitely implement it.
 
 https://cert-manager.io/docs/tutorials/acme/nginx-ingress/
+
+# Let's destroy using terraform 
 
 N. terraform destroy {run this only if you want to destroy the resources as clean up is also mandatory only for testing purpose}
 
