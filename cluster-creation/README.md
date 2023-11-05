@@ -164,6 +164,7 @@ I have tried my best to cope up and implement with let's encrypt by following th
 
 https://cert-manager.io/docs/tutorials/acme/nginx-ingress/
 
+
 # Let's destroy using terraform 
 
 N. terraform destroy {run this only if you want to destroy the resources as clean up is also mandatory only for testing purpose}
