@@ -150,7 +150,7 @@ Then you can also follow and run the below commands for good understanding
 
 #kubectl get secrets
 
-#kubectl describe secret <name of your secret> 
+#kubectl describe secret <your-secret> 
 
 # I am going through the things mentioned in the official docs of cert manager how to use of let's encypt 
 I have tried my best to cope up and implement with let's encrypt by following the below doc, but i was not. I will defenitely implement it.
