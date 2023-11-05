@@ -101,14 +101,16 @@ The following output tells that your secret of mysql, service,persistent volume 
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/2565d4d3-8aca-47a2-84ec-6ad39f495d3a)
 
 M. Once after completion you can go to AWS Console and click on EC2 and in the left plane select LoadBalancers where it will navigate to another page and copy the
-DNS name and go to the chrome browser and paste that dns name and hit enter. Bingo!! you will see wordpress will be up and running.
+DNS name and go to the chrome browser and paste that dns name and hit enter.  you will see wordpress will be up and running.
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/37eb6d60-2bee-4db1-a451-860d5cc45088)
 
 Wordpress is up and runnig now.
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/a6ee6db5-9483-4560-a662-bfcdf1ae8afc)
+![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/4e6d739e-1600-4e83-beb6-8e686a362b3d)
 
 
-# Now we will try to use cert manager, ingress nginx controller
+
+# Now we will try to use cert manager,let's encrypt, ingress nginx controller
 
 We will install both nginx and cert manager using helm.
 
@@ -132,9 +134,28 @@ Install cert manager:
 
 #helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.7.1 --set installCRDs=true
 
-# Now create wp_production_issuer.yaml file which in present under kubernetes-manifest-files
+# Now create wp_production_issuer.yaml file which in present under kubernetes-manifest-files folder in this repo only 
 
+once you create then run kubectl apply -f wp_production_issuer.yaml
 
+# Now we need to create certificate.yamlfile as well and we should any valid domain registered where we can refer in this yaml file.
+
+once you create certificate yaml file then run kubectl apply -f certificate.yaml
+
+Then you can also follow and run the below commands for good understanding
+
+#kubectl get certificate -w 
+
+#kubectl describe certificate <certificate-name>
+
+#kubectl get secrets
+
+#kubectl describe secret <name of your secret> 
+
+# I am going through the things mentioned in the official docs of cert manager how to use of let's encypt 
+I have tried my best to cope up and implement with let's encrypt by following the below doc
+
+https://cert-manager.io/docs/tutorials/acme/nginx-ingress/
 
 N. terraform destroy {run this only if you want to destroy the resources as clean up is also mandatory only for testing purpose}
 
