@@ -80,7 +80,7 @@ kubectl apply -f wordpress_ingress.yaml
 
 kubectl get ingress
 
-And in DNS that is {route53 in aws} creating a hosting zone creating A recored and mapping the loadblanacer to which the traffic has to handle.
+
 
 
 
