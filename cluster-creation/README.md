@@ -68,31 +68,32 @@ kubectl get nodes
 I. Now we will start creating our mysql-wordpress deployments and as well installing cert manager and ingress nginx controller
 
 J. Let's create kustomization.yaml which will help to store the PASSWORD
-cat <<EOF >./kustomization.yaml
+( cat <<EOF >./kustomization.yaml
 secretGenerator:
 - name: mysql-pass
   literals:
   - password=YOUR_PASSWORD
-EOF  
+EOF )
+ 
 For your reference see as below image
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/e76524db-1b62-4000-a705-82a8cab89b80)
 
 K. Let's download the mysql and wordpress deployment configuration files
 MySQL deployment configuration file:
-curl -LO https://k8s.io/examples/application/wordpress/mysql-deployment.yaml
+( curl -LO https://k8s.io/examples/application/wordpress/mysql-deployment.yaml )
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/4fac66e5-145e-44f4-a55b-49159cb3fd28)
 
 WordPress configuration file:
-curl -LO https://k8s.io/examples/application/wordpress/wordpress-deployment.yaml
+( curl -LO https://k8s.io/examples/application/wordpress/wordpress-deployment.yaml )
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/5d7b492a-9425-4cb2-abbf-323f63facb78)
 
 Once downloaded add them to kustomization.yaml file by running the below command
-cat <<EOF >>./kustomization.yaml
+( cat <<EOF >>./kustomization.yaml
 resources:
   - mysql-deployment.yaml
   - wordpress-deployment.yaml
 EOF
-
+)
 Please find the below image for your reference
 ![image](https://github.com/anilsree6/terraform-with-eks/assets/149375170/1e341992-c485-450f-b618-cde5f2ae8142)
 
